@@ -1,0 +1,58 @@
+:root {
+  --check:5px solid rgb(208, 24, 24);
+ --color-primary:#82ccdd;
+ --color-primary-dark:#60a3bc;
+ --color-primary-dark-2:#3c6382;
+ --color-primary-dark-3:#0a3d62;
+
+
+ --color-grey:#dfe4ea;
+ --color-grey-1:#ced6e0;
+
+ --color-white:white;
+ --color-black:black;
+
+ --first-color:black;
+
+ --box-shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --box-shadow-light:  0 2rem 5rem rgba(0,0,0,.06);
+}
+
+$bp-largest:75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.5em; // 500px
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+     
+ }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 55%;
+     
+ }
+}
+
+body {
+  font-family: sans-serif, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  
+  font-weight: 300;
+ min-height: 100vh;
+  line-height: 1.5rem;
+  color: var(--color-white);
+}

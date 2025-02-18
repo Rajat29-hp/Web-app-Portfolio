@@ -1,0 +1,284 @@
+.container {
+  max-width: 100%;
+  min-height: 95vh;
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .header {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary),
+      var(--color-primary-dark-2)
+    );
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow-dark);
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-wrap: wrap;
+      height: 5rem;
+      max-width: 100vh;
+      align-content: space-around;
+    }
+  }
+
+  .name {
+    font-size: larger;
+    text-align: center;
+    margin-left: 1rem;
+    color: var(--color-black);
+    animation: moveleft 1s linear;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4rem;
+
+    &__content {
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+
+      &-link {
+        text-decoration: none;
+        color: var(--color-black);
+        margin-left: 4rem;
+        padding: 1rem 0;
+      }
+      
+      &-link:hover {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  .home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      align-self: center;
+      line-height: 5rem;
+      @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        padding-top: 1rem;
+      }
+      &--heading {
+        color: var(--color-primary-dark);
+        font-size: 4rem;
+        font-weight: 500;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+      &--color {
+        color: black;
+        animation: nameMove 2s linear infinite;
+      }
+    }
+    &__item {
+      border: none;
+      margin-top: 3rem;
+
+      &--photo {
+        border-radius: 50%;
+        width: 30rem;
+        height: 30rem;
+        @media only screen and (max-width: $bp-smallest) {
+          margin-top: -20rem;
+          width: 35rem;
+          height: 35rem;
+        }
+      }
+    }
+    @media only screen and (max-width: $bp-largest) {
+      &__item {
+        border: none;
+        margin-top: 17rem;
+      }
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      height: 100vh;
+      margin-top: -5rem;
+    }
+  }
+}
+
+.section-about {
+  color: var(--color-black);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  padding-top: 1rem;
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: -10rem;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.2rem 2rem;
+
+    &--image {
+      width: 20rem;
+      height: 12rem;
+    }
+    &--para {
+      flex-wrap: wrap;
+      width: 50%;
+      color: var(--color-black);
+      font-size: 1.3rem;
+      font-weight: 200;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      margin: 2rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__btn {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary),
+      var(--color-primary-dark-2)
+    );
+    padding: 0.8rem 3rem;
+    border-radius: 30px;
+    margin-left: 7rem;
+    transform: all 0.2s;
+    border: none;
+    &-item {
+      text-decoration: none;
+      color: var(--color-black);
+    }
+
+    &:hover {
+      color: var(--color-black);
+      background-color: var(--color-grey-1);
+      cursor: pointer;
+      box-shadow: var(--box-shadow-dark);
+      transform: translateY(-2px);
+    }
+    &:active,
+    &:focus {
+      transform: translateX(-2px);
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin-left: 5rem;
+    }
+  }
+
+  &__learn {
+    height: 50vh;
+    padding: 0.3rem 0.2rem;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+
+    &-heading {
+      color: black;
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    &-list {
+      overflow: hidden;
+      height: 30vh;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 2rem;
+
+      justify-content: space-around;
+      color: black;
+      animation-name: moveInBtn;
+      animation-duration: 2s;
+      @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
+        margin: 1rem;
+      }
+    }
+    &-items {
+      max-width: 80%;
+      color: black;
+      height: 8rem;
+      padding: 0.5rem;
+      margin: 1rem;
+      justify-content: center;
+      align-items: center;
+      box-shadow: var(--box-shadow-dark);
+      background-color: var(--color-grey-1);
+      border-radius: 5px;
+      transform: all 0.2s;
+
+      &:hover {
+        color: blue;
+        animation: learnUp 2s linear infinite;
+      }
+    }
+    &-learnphoto {
+      display: flex;
+
+      background-size: cover;
+      margin: 1rem 1.2rem;
+      width: 4rem;
+      height: 4rem;
+      @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  color: var(--color-black);
+  margin-top: 10rem;
+  text-align: center;
+  background-color: var(--color-primary);
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 0;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding-top: 3rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-icon {
+      padding: 2rem;
+    }
+  }
+}
